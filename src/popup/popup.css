@@ -1,0 +1,44 @@
+body{
+    width: 400px;
+    padding: 8px;
+}
+
+#requests{
+    padding: 0;
+    list-style: none;
+}
+
+#requests li{
+    border-top: 0;
+    border-bottom: 1px;
+    border-left: 0;
+    border-right: 0;
+    border-style: solid;
+    border-color: #999;
+    padding: 3px;  
+    margin: 2px;
+}
+
+pre{
+    width: 100%;
+    padding: 3px;
+    background-color: #ccc;
+    overflow: scroll;
+}
+
+code{
+    font-family: 'SF Mono', Menlo, Monaco, 'Courier New', monospace;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+}
+
+header h1{
+    margin: 0;
+}
+
+header>*{
+    padding: 5px;
+}

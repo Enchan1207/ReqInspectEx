@@ -1,0 +1,37 @@
+{
+    "manifest_version": 2,
+    "name": "Request Inspector",
+    "version": "0.0.1",
+    "description": "inspect and intercept request.",
+    "permissions": [
+        "activeTab",
+        "storage",
+        "webRequest",
+        "webRequestBlocking",
+        "*://*/*/"
+    ],
+    "icons": {
+        "48": "resources/icons/icon48.png"
+    },
+    "browser_action": {
+        "default_popup": "src/popup/index.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*/**",
+                "http://*/**"
+            ],
+            "js": [
+                "src/cscript/cscript.js"
+            ],
+            "run_at": "document_start"
+        }
+    ],
+    "background": {
+        "scripts": [
+            "src/background/background.js"
+        ],
+        "persistent": true
+    }
+}
